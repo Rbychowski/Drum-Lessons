@@ -1,7 +1,11 @@
 
 import React, { Component } from 'react';
 import Directory from './DirectoryComponent';
+<<<<<<< HEAD
 //import LessonInfo from './LessonInfoComponent';
+=======
+import LessonInfo from './LessonInfoComponent';
+>>>>>>> ed9115630b2dd7ab65d559eff47ec7fdb5ab6b05
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
