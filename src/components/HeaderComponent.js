@@ -2,11 +2,7 @@
 import React, { Component }  from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-<<<<<<< HEAD
-//import { findAllByTestId } from '@testing-library/dom';
-=======
 import { findAllByTestId } from '@testing-library/dom';
->>>>>>> ed9115630b2dd7ab65d559eff47ec7fdb5ab6b05
 
 class Header extends Component {
 

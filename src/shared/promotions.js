@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-  
-=======
->>>>>>> ed9115630b2dd7ab65d559eff47ec7fdb5ab6b05
 export const PROMOTIONS = [
     {
         id: 0,

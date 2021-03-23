@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 function RenderLesson({lesson}) {
@@ -8,7 +9,6 @@ function RenderLesson({lesson}) {
             <Card>
                 <CardImg top src={lesson.image} alt={lesson.name} />
                 <CardBody>
-                    <CardTitle>{lesson.name}</CardTitle>
                     <CardText>{lesson.description}</CardText>
                 </CardBody>
             </Card>
@@ -39,8 +39,18 @@ function LessonInfo(props) {
         return (
             <div className="container">
                 <div className="row">
-                    <RenderLesson lesson={props.lesson} />
-                    <RenderComments comments={props.lesson.comments} />
+                    <div className="col">
+                        <Breadcrumb>
+                            <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
+                            <BreadcrumbItem active>{props.lesson.name}</BreadcrumbItem>
+                        </Breadcrumb>
+                        <h2>{props.lesson.name}</h2>
+                        <hr />
+                    </div>
+                    <div className="row">
+                        <RenderLesson lesson={props.lesson} />
+                        <RenderComments comments={props.lesson.comments} />
+                    </div>
                 </div>
             </div>
         );
